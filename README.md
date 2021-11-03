@@ -6,5 +6,4 @@ jotain pitäisi kirjoittaa...
 https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt [Gitlog.txt]
 ,
 https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt [Komentorivi.txt]
-http://github.com - automatic!
-[GitHub](http://github.com)
+
