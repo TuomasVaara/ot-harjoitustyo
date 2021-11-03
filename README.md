@@ -7,3 +7,4 @@ https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko1/gitl
 ,
 https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt [Komentorivi.txt]
 
+Lolski
