@@ -8,3 +8,4 @@ jotain pitäisi kirjoittaa...
 
 [Komentorivi.txt](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt) 
 
+[Unicafe Testikattavuus](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/laskarit/viikko2/Unicafe%20Testikattavuus.jpg)
