@@ -7,10 +7,10 @@ class TestKassapaate(unittest.TestCase):
         self.kassa = Kassapaate()
         self.maksu = 500
         self.kortti = Maksukortti(500)
-    
+
     def test_raha_maara_oikea(self):
         self.assertEqual(self.kassa.kassassa_rahaa, 100000)
-    
+
     def test_lounas_maara_oikea(self):
         self.assertEqual(self.kassa.edulliset, 0)
         self.assertEqual(self.kassa.maukkaat, 0)
@@ -78,9 +78,10 @@ class TestKassapaate(unittest.TestCase):
         self.assertEqual(str(self.kortti), "saldo: 1.0")
 
     def test_korttimaksu_ei_tarpeeksi_rahaa_maukkaat_saldo(self):
+        self.kassa.syo_edullisesti_kortilla(self.kortti)
         self.kassa.syo_maukkaasti_kortilla(self.kortti)
-        self.kassa.syo_maukkaasti_kortilla(self.kortti)
-        self.assertEqual(self.kassa.maukkaat, 1)
+        self.assertEqual(self.kassa.maukkaat, 0)
+        self.assertEqual(self.kassa.edulliset, 1)
 
     def test_kassan_raha_ei_muutu_korttimaksussa_edullinen(self):
         self.kassa.syo_edullisesti_kortilla(self.kortti)
@@ -99,3 +100,14 @@ class TestKassapaate(unittest.TestCase):
         self.kassa.lataa_rahaa_kortille(self.kortti, 500)
         self.assertEqual(self.kassa.kassassa_rahaa, 100500)
         self.assertEqual(str(self.kortti), "saldo: 10.0")
+
+    def test_ei_voi_ladata_negatiivista_rahaa(self):
+        self.kassa.lataa_rahaa_kortille(self.kortti, -1)
+        self.assertEqual(self.kassa.kassassa_rahaa, 100000)
+        self.assertEqual(str(self.kortti), "saldo: 5.0")
+
+
+    def test_maksu_ei_riita_lounas_ei_muutu(self):
+        self.maksu = self.maksu - 300
+        self.kassa.syo_edullisesti_kateisella(self.maksu)
+        self.assertTupleEqual((self.kassa.kassassa_rahaa, self.kassa.syo_maukkaasti_kateisella(self.maksu), self.kassa.maukkaat), (100000, 200, 0))
