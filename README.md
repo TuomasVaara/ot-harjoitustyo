@@ -1,6 +1,6 @@
 # Linkit 
 
-jotain pitäisi kirjoittaa...
+jotain pitäisi kirjoittaa.
 **pää on ihan tyhjä** 
 *ehkä minä vielä jotain keksin*
 
