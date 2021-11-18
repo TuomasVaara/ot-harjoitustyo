@@ -1,4 +1,3 @@
 
-class expenses_repository:
-
+class BudjetRepository:
     def __init__ (self):None
