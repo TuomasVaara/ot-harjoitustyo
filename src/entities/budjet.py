@@ -1,6 +1,7 @@
 
 class Budjet:
-    def self __init__(self):
+    def __init__(self, name):
+        self.name = name
         self.income = 0
         self.expenses = 0
 

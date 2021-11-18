@@ -7,10 +7,14 @@ authors = ["Tuomas Vaara <tuomas.vaara1999@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 invoke = "^1.6.0"
+python-dotenv = "^0.19.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 coverage = "^6.1.2"
+pylint = "^2.11.1"
+autopep8 = "^1.6.0"
+pytest-dotenv = "^0.5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

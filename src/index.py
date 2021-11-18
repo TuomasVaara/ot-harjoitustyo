@@ -9,7 +9,6 @@ def main():
             print("Insert the name of expense and the amount.")
             expense = input("Expense ")
             amount = int(input("Amount "))
-            prog.add_expenses(expense, amount)
 
         if command == 2: None
 
