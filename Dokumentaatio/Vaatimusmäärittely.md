@@ -2,27 +2,26 @@
 
 ## Sovelluksen tarkoitus
 
-Budjetointi sovelluksella pystyy seuraamaan omia kuukautisia menojaan ja tulojaan. Sovelluksella ei ole monia käyttäjiä, elise on tarkoitettu yhden henkilön tai ruokakunnan budjetin seurantaan. 
-
+Sovelluksen on tarkoitus toimia tavallisena koulu laskimena, jossa on peruslaskutoimituksien lisäksi monia muita laskutoimituksia, kuten sin,cos,tan ja logaritmit.
 
 ## Käyttäjät
 
-Sovelluksella on vain yksi käyttäjä, eli sille ei voi luoda uusia profiileja tai käyttäjiä. Myöhemmin, kun sovelluksen toiminnalisuudet on toimivat niin voi harkita useamman budjetin seuraamista
+Sovelluksella on vain yksi käyttäjä, joka käyttää sovellusta. 
+
 
 ## Käyttöliittymän kuvaus
 
-Sovellus avautuu näkymään mistä voi valita lisääkö menoja, tuloja vai meneekö kuukauden menojen ja tulojen yhteenvetoon.
+Sovelluksella on vain yksi näkymä. Näkymässä käyttäjä näkee mahdolliset laskutoimitukset ja sovelluksen käynnistämisen jälkeen suoritetut laskutoimitukset.
+
 
 ## Perusversion toiminnallisuudet
 
-- Käyttäjä voi lisätä tuloja, kuten palkan tai tuet budjettiin
-   - Lisäämisessä annetaan summa ja nimi tulolle
-- Käyttäjä voi lisätä menoja, kuten asumiskustannukset, ruokakustannukset budjettiin
-   - Lisäämisessä annetaan summa ja nimi menoille
-- Käyttäjä voi tarkastella kuukauden aikana tulleita tuloja ja menoja ja näkee onko miinuksen vai plussan puolella
-- Kuukauden vaihtuessa käyttäjä voi tallentaa kuluneen kuukauden yhteenvedon tietokantaan
+- Peruslaskutoimitukset (+,-,*,/)
+- Erilaisten lausekkeiden laskeminen
+- Muut laskutoimitukset, kuten sin,cos,tan
+- Käyttäjä voi nähdä käynnistyksen jälkeen lasketut laskutoimitukset
 
-## Jatkokehitys ideoita
+## Jatkokehitysideoita
 
-- Yhteenveto näkymää voi laajentaa siten, että siinä näkyy myös edellisen kuukauden yhteenveto
-- Väärin lisättyjen tulojen ja menojen poistaminen
+- Shift painikkeen lisääminen, mikä antaa joillekin toiminnalisuuksille uuden toiminnallisuuden. 
+- Vastauksen tarkkuudeen määrittely eli tuleeko vastaukset murto- vai desimaalilukuina. 
