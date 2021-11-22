@@ -4,28 +4,19 @@ class Operations:
     def __init__(self):
         self.list = Insert()
 
-    def Add(self):
-        return sum(self.list.Inserts("+"))
+    def Add(self, x, y):
+        return x + y
 
-    def Subtract(self):     
-        return sum(self.list.Insert_sub())
+    def Subtract(self, x,y):     
+        return x - y
         
-    def Multiply(self):
-        numbers = self.list.Inserts("*")
-        multi = numbers[0]
-        for i in range(1, len(numbers)):
-            multi *= numbers[i]
-        return multi
+    def Multiply(self,x,y):
+        return x * y
 
-    def Divide(self):
-        numbers = self.list.Inserts("/")
-        divide = numbers[0]
-        for i in range (1, len(numbers)):
-            if numbers[i] == 0:
-                divide = 0
-                break
-            divide = divide/numbers[i]
-        return divide
+    def Divide(self,x,y):
+        if y == 0:
+            return 0
+        return x / y
 
     def Power(self, number, power): None
 
