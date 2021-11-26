@@ -1,5 +1,6 @@
 from Operations.operations import Operations
 from Operations.expression import Expression
+
 class Calculator:
 
     def __init__(self):
