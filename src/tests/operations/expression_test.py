@@ -6,4 +6,3 @@ class TestExpression(unittest.TestCase):
 
     def setUp(self):
         self.expression = Expression()
-        
