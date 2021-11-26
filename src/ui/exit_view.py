@@ -3,11 +3,10 @@ from tkinter import ttk, constants
 
 class ExitView:
 
-    def __init__(self, root, handle_calculator, handle_exit, handle_settings):
+    def __init__(self, root, handle_calculator, handle_exit):
         self._root = root
         self._handle_exit = handle_exit
         self._handle_calculator = handle_calculator
-        self._handle_settings = handle_settings
         self._frame = None
 
         self._initialize()
@@ -34,13 +33,7 @@ class ExitView:
             command=self._handle_calculator
         )
 
-        settings_button = ttk.Button(
-            master=self._frame,
-            text="Settings",
-            command=self._handle_settings
-        )
-
         label.grid(row=0, column=0)
         exit_button.grid(row=1, column=0)
         calculator_button.grid(row=1, column=1)
-        settings_button.grid(row=1, column=2)
+        
