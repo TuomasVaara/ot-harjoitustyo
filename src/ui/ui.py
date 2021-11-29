@@ -1,5 +1,5 @@
-from ui.calculator_view import CalculatorView
-from ui.exit_view import ExitView
+from ui.views.calculator_view import CalculatorView
+from ui.views.home_view import HomeView
 
 
 class UI:
@@ -8,7 +8,7 @@ class UI:
         self._current_view = None
 
     def start(self):
-        self._show_exit_view()
+        self._show_home_view()
 
     def _hide_current_view(self):
         if self._current_view:
@@ -16,10 +16,10 @@ class UI:
 
         self._current_view = None
 
-    def _show_exit_view(self):
+    def _show_home_view(self):
         self._hide_current_view()
 
-        self._current_view = ExitView(
+        self._current_view = HomeView(
             self._root,
             self._show_calculator_view,
             self._root.destroy,
@@ -32,7 +32,7 @@ class UI:
 
         self._current_view = CalculatorView(
             self._root,
-            self._show_exit_view
+            self._show_home_view
         )
 
         self._current_view.pack()

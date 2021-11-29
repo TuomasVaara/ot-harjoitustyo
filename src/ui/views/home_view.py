@@ -1,7 +1,8 @@
 from tkinter import ttk, constants
 
+from ui.builders.build_home_view import HomeBuilder
 
-class ExitView:
+class HomeView:
 
     def __init__(self, root, handle_calculator, handle_exit):
         self._root = root
@@ -18,22 +19,11 @@ class ExitView:
         self._frame.destroy()
 
     def _initialize(self):
+        
         self._frame = ttk.Frame(master=self._root)
+        builder = HomeBuilder(self._frame, self._handle_exit, self._handle_calculator)
         label = ttk.Label(master=self._frame, text="Exit or Calculator")
-
-        exit_button = ttk.Button(
-            master=self._frame,
-            text="Exit",
-            command=self._handle_exit
-        )
-
-        calculator_button = ttk.Button(
-            master=self._frame,
-            text="Calculator",
-            command=self._handle_calculator
-        )
-
         label.grid(row=0, column=0)
-        exit_button.grid(row=1, column=0)
-        calculator_button.grid(row=1, column=1)
+        builder._buttons()
+        
         
