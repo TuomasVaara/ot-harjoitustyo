@@ -16,9 +16,9 @@ Sovelluksella on vain yksi näkymä. Näkymässä käyttäjä näkee mahdolliset
 
 ## Perusversion toiminnallisuudet
 
-- Peruslaskutoimitukset (+,-,*,/)
-- Erilaisten lausekkeiden laskeminen
-- Muut laskutoimitukset, kuten sin,cos,tan
+- Peruslaskutoimitukset (+,-,*,/) [Tehty]
+- Erilaisten lausekkeiden laskeminen [Tehty]
+- Muut laskutoimitukset, kuten sin,cos,tan [Tehty]
 - Käyttäjä voi nähdä käynnistyksen jälkeen lasketut laskutoimitukset
 
 ## Jatkokehitysideoita
