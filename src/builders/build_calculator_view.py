@@ -14,7 +14,7 @@ class Builder:
             master=self._frame,
             textvariable=self._equ
         )
-        expression.grid(columnspan=3, ipadx=25, sticky=constants.W)
+        expression.grid(columnspan=2, ipadx=20, sticky=constants.W)
 
     def _numbers(self):
         num_1 = ttk.Button(

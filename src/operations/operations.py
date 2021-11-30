@@ -36,3 +36,6 @@ class Operations:
         if left > right:
             self._expression = self._expression + ")"
         self._equ.set(self._expression)
+
+    def __str__(self):
+        return self._expression
