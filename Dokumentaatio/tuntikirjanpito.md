@@ -9,4 +9,4 @@
 | 24.11 | 5    | tkinterin käyttöönotto |
 | 25.11 | 5    | tkinterin käyttöliittymä ja perustoiminnallisuuksien tekoa |
 | 29.11 | 2    | perustoiminnallisuudet ja käyttöliittymä valmiiksi |
-| 30.11 |      | testien aloitus tkinter käyttöönoton jälkeen |
+| 30.11 | 5    | testien aloitus tkinter käyttöönoton jälkeen |
