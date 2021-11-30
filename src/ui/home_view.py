@@ -1,6 +1,6 @@
 from tkinter import ttk, constants
 
-from ui.builders.build_home_view import HomeBuilder
+from builders.build_home_view import HomeBuilder
 
 class HomeView:
 

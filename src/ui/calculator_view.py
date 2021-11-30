@@ -1,5 +1,5 @@
 from tkinter import ttk, constants, StringVar
-from ui.builders.build_calculator_view import Builder
+from builders.build_calculator_view import Builder
 
 
 class CalculatorView:

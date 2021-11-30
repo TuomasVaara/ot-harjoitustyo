@@ -1,5 +1,5 @@
-from ui.views.calculator_view import CalculatorView
-from ui.views.home_view import HomeView
+from ui.calculator_view import CalculatorView
+from ui.home_view import HomeView
 
 
 class UI:
