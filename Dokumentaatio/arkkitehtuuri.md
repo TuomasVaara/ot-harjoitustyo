@@ -2,4 +2,4 @@
 
 ## Rakenne
 
-![Pakkausrakenne](./arkkitehtuuri.jpg)
+![Pakkausrakenne](./kuvat/arkkitehtuuri.jpg)
