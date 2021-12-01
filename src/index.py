@@ -2,13 +2,13 @@ from tkinter import Tk
 from ui.ui import UI
 
 
+
 def main():
     window = Tk()
     window.title("Calculator")
 
     ui = UI(window)
     ui.start()
-    
 
     window.mainloop()
 

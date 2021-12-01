@@ -1,14 +1,14 @@
-from tkinter import ttk, constants, StringVar
+from tkinter import ttk, constants
 from ui.builders.build_calculator_view import Builder
 
 
 class CalculatorView:
 
-    def __init__(self, root, handle_home):
+    def __init__(self, root, handle_home, operator):
         self._root = root
         self._handle_home = handle_home
         self._frame = None
-        self._equation = StringVar()
+        self._operator = operator
         
         self._initialize()
 
@@ -20,7 +20,7 @@ class CalculatorView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        builder = Builder(self._frame,self._equation)
+        builder = Builder(self._frame, self._operator)
         #Build expression 
         builder._expression()
         #Button to Home screen

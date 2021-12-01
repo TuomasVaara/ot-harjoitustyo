@@ -4,17 +4,17 @@ from operations.operations import Operations
 
 
 class Builder:
-    def __init__(self, frame, equation):
+    def __init__(self, frame, operator):
         self._frame = frame
-        self._equ = equation
-        self._operator = Operations(equation)
+        self._operator = operator
+        self._equ = self._operator._equ
 
     def _expression(self):
         expression = ttk.Entry(
             master=self._frame,
             textvariable=self._equ
         )
-        expression.grid(columnspan=2, ipadx=20, sticky=constants.W)
+        expression.grid(columnspan=3, ipadx=20, sticky=constants.W)
 
     def _numbers(self):
         num_1 = ttk.Button(
@@ -129,7 +129,7 @@ class Builder:
         sqrt_button.grid(row=4, column=1)
         log_button = ttk.Button(
             master=self._frame,
-            text="log",
+            text="ln",
             command=lambda: self._operator.press("log(")
         )
         log_button.grid(row=4, column=2)
@@ -178,6 +178,6 @@ class Builder:
         brackets_button = ttk.Button(
             master=self._frame,
             text="( )",
-            command=lambda: self._operator.brackets("()")
+            command=lambda: self._operator.brackets()
         )
         brackets_button.grid(row=4, column=4)

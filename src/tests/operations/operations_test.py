@@ -3,7 +3,6 @@ from math import sin, cos, tan, pi, e, log, sqrt, factorial
 from operations.operations import OperationsTest
 
 
-
 class TestOperations(unittest.TestCase):
 
     def setUp(self):
@@ -11,11 +10,11 @@ class TestOperations(unittest.TestCase):
 
     def test_operations_exist(self):
         self.assertEqual(self._operations._expression, "")
-    
+
     def test_press_works_numbers(self):
         self._operations.press(1)
         self.assertEqual(self._operations._expression, "1")
-    
+
     def test_press_works_var(self):
         self._operations.press("+")
         self.assertEqual(self._operations._expression, "+")
@@ -28,7 +27,7 @@ class TestOperations(unittest.TestCase):
         self._operations.press("5/0")
         self._operations.equal()
         self.assertEqual(self._operations._expression, "????error????")
-    
+
     def test_equal_expression_works(self):
         self._operations.press("5+8*2-1")
         self._operations.equal()
@@ -38,7 +37,7 @@ class TestOperations(unittest.TestCase):
         self._operations.press("sin(0)")
         self._operations.equal()
         self.assertEqual(self._operations._expression, f"={sin(0)}")
-    
+
     def test_equal_con_works(self):
         self._operations.press("cos(0)")
         self._operations.equal()
@@ -48,7 +47,7 @@ class TestOperations(unittest.TestCase):
         self._operations.press("tan(0)")
         self._operations.equal()
         self.assertEqual(self._operations._expression, f"={tan(0)}")
-    
+
     def test_equal_pi_neper_log_works(self):
         self._operations.press("π")
         self._operations.equal()
@@ -66,8 +65,9 @@ class TestOperations(unittest.TestCase):
 
     def test_equal_power_square_factorial_works(self):
         self._operations.press("2**2+sqrt(4)+factorial(2)")
-        self._operations.equal() 
-        self.assertEqual(self._operations._expression, f"={2**2+sqrt(4)+factorial(2)}")
+        self._operations.equal()
+        self.assertEqual(self._operations._expression,
+                         f"={2**2+sqrt(4)+factorial(2)}")
 
     def test_equal_basic_operations(self):
         self._operations.press("2+3-1*8/8")
@@ -90,21 +90,15 @@ class TestOperations(unittest.TestCase):
         self.assertEqual(self._operations._expression, "")
 
     def test_brackets_work(self):
-        self._operations.brackets("()")
-        self._operations.brackets("()")
+        self._operations.brackets()
+        self._operations.brackets()
         self.assertEqual(self._operations._expression, "()")
-    
+
     def test_brackets_right_bracket(self):
-        self._operations.brackets("()")
+        self._operations.brackets()
         self.assertEqual(self._operations._expression, "(")
-    
+
     def test_brackets_left_bracket(self):
         self._operations.press("sqrt(16")
-        self._operations.brackets("()")
+        self._operations.brackets()
         self.assertEqual(self._operations._expression, "sqrt(16)")
-    
-
-    
-
-    
-    

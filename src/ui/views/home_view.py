@@ -4,10 +4,11 @@ from ui.builders.build_home_view import HomeBuilder
 
 class HomeView:
 
-    def __init__(self, root, handle_calculator, handle_exit):
+    def __init__(self, root, handle_calculator, handle_exit, handle_settings):
         self._root = root
         self._handle_exit = handle_exit
         self._handle_calculator = handle_calculator
+        self._handle_settings = handle_settings
         self._frame = None
 
         self._initialize()
@@ -21,7 +22,7 @@ class HomeView:
     def _initialize(self):
         
         self._frame = ttk.Frame(master=self._root)
-        builder = HomeBuilder(self._frame, self._handle_exit, self._handle_calculator)
+        builder = HomeBuilder(self._frame, self._handle_exit, self._handle_calculator, self._handle_settings)
         label = ttk.Label(master=self._frame, text="Exit or Calculator")
         label.grid(row=0, column=0)
         builder._buttons()
