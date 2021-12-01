@@ -1,6 +1,6 @@
 # Laskin
 
-Laskin toimii kuin normaali laskin eli sillä pystyy laskemaan peruslaskutoimitukset ja muita toiminnallisuuksia, kuten sin,cos,tan. 
+Laskin on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimessa (eli +,-,*,/) ja vähemmän kuin esimerkiksi peruskoulun laskimessa. 
 
 
 ## Dokumentaatio
@@ -23,7 +23,7 @@ Laskin toimii kuin normaali laskin eli sillä pystyy laskemaan peruslaskutoimitu
 Ohjelma pystytään suorittamaan komennolla: poetry run invoke start
 
 ### Testaus
-Testi voi suorittaa komennolla: poetry run invoke test
+Testit voi suorittaa komennolla: poetry run invoke test
 
 ### Testikattavuus
 Testikattavuusraportin voi generoida komennolla: poetry run coverage-report
