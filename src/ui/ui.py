@@ -9,8 +9,14 @@ class UI:
     def __init__(self, root):
         self._root = root
         self._current_view = None
-        self._stringvar = StringVar()
-        self._operator = Operations(self._stringvar)
+        self._expression = StringVar()
+        self._fraction_decimal = StringVar()
+        self._round_view = StringVar()
+
+        self._fraction_decimal.set("decimal")
+        self._round_view.set("1")
+
+        self._operator = Operations(self._expression, self._fraction_decimal, self._round_view)
 
     def start(self):
         self._show_home_view()

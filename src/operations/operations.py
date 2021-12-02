@@ -1,21 +1,30 @@
 from math import pi, sqrt, sin, cos, tan, factorial, log, e
+from fractions import Fraction
+π = pi
+
 
 class Operations:
-    def __init__(self, equation):
+    def __init__(self, equation, fraction_decimal_view, round_view):
         self._equ = equation
+        self._fraction_decimal = fraction_decimal_view
+        self._round_view = round_view
         self._expression = ""
         self._round = 1
+        self._form = "decimal"
 
     def press(self, symbol):
         self._expression = self._expression + str(symbol)
         self._equ.set(self._expression)
 
     def equal(self):
-        value = self.calculate(self._expression)
+        if self._form == "decimal":
+            value = self.calculate_decimal()
+        if self._form == "fraction":
+            value = self.calculate_fraction()
         if value == "error":
             self._equ.set("????error????")
         else:
-            self._equ.set(f"{self._expression}={value}")
+            self._equ.set(f"{self._expression} = {value}")
         self._expression = ""
 
     def clear_expression(self):
@@ -31,20 +40,37 @@ class Operations:
             self._expression = self._expression + ")"
         self._equ.set(self._expression)
 
-    def calculate(self, expression):
-        π = pi
+    def calculate_decimal(self):
+        global π
         try:
-            if expression == "" or expression == "()":
-                return 0
             value = str(round(eval(self._expression), self._round))
             return value
         except ValueError:
             return "error"
 
-    def specify_round(self):
-        if self._round == 4:
-            self._round = 0
+    def calculate_fraction(self):
+        global π
+        try:
+            value = Fraction(eval(self._expression)).limit_denominator()
+            return value
+        except ValueError:
+            return "error"
+
+    def increase_round(self):
         self._round += 1
+        self._round_view.set(str(self._round))
+
+    def default_round(self):
+        self._round = 1
+        self._round_view.set(str(self._round))
+
+    def switch_fraction_decimal(self):
+        if self._form == "decimal":
+            self._form = "fraction"
+            self._fraction_decimal.set("fraction")
+        else:
+            self._form = "decimal"
+            self._fraction_decimal.set("decimal")
 
 
 class OperationsTest:

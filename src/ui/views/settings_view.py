@@ -21,3 +21,4 @@ class SettingsView:
         self._frame = ttk.Frame(master=self._root)
         builder = SettingsBuilder(self._frame, self._handle_home, self._operator)
         builder._buttons()
+        builder._labels()

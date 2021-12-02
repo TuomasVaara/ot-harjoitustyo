@@ -10,11 +10,12 @@ class Builder:
         self._equ = self._operator._equ
 
     def _expression(self):
-        expression = ttk.Entry(
+        expression = ttk.Label(
             master=self._frame,
-            textvariable=self._equ
+            textvariable=self._equ,
+            background="white"
         )
-        expression.grid(columnspan=3, ipadx=20, sticky=constants.W)
+        expression.grid(columnspan=3, ipadx=80, sticky=constants.W)
 
     def _numbers(self):
         num_1 = ttk.Button(
