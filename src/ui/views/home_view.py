@@ -23,8 +23,6 @@ class HomeView:
         
         self._frame = ttk.Frame(master=self._root)
         builder = HomeBuilder(self._frame, self._handle_exit, self._handle_calculator, self._handle_settings)
-        label = ttk.Label(master=self._frame, text="Exit or Calculator")
-        label.grid(row=0, column=0)
         builder._buttons()
         
         

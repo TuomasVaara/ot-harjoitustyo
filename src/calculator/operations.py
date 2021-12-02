@@ -10,16 +10,22 @@ class Operations:
         self._round_view = round_view
         self._expression = ""
         self._round = 1
-        self._form = "decimal"
+        self._form = "Decimal"
+
+    def set_round(self, num):
+        self._round = num
+
+    def set_form(self, name):
+        self._form = name
 
     def press(self, symbol):
         self._expression = self._expression + str(symbol)
         self._equ.set(self._expression)
 
     def equal(self):
-        if self._form == "decimal":
+        if self._form == "Decimal":
             value = self.calculate_decimal()
-        if self._form == "fraction":
+        if self._form == "Fraction":
             value = self.calculate_fraction()
         if value == "error":
             self._equ.set("????error????")
@@ -55,22 +61,6 @@ class Operations:
             return value
         except ValueError:
             return "error"
-
-    def increase_round(self):
-        self._round += 1
-        self._round_view.set(str(self._round))
-
-    def default_round(self):
-        self._round = 1
-        self._round_view.set(str(self._round))
-
-    def switch_fraction_decimal(self):
-        if self._form == "decimal":
-            self._form = "fraction"
-            self._fraction_decimal.set("fraction")
-        else:
-            self._form = "decimal"
-            self._fraction_decimal.set("decimal")
 
 
 class OperationsTest:

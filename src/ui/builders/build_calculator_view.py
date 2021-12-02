@@ -1,6 +1,4 @@
 from tkinter import ttk, constants
-from operations.operations import Operations
-
 
 
 class Builder:

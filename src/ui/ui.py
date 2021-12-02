@@ -1,7 +1,8 @@
 from ui.views.calculator_view import CalculatorView
 from ui.views.home_view import HomeView
 from ui.views.settings_view import SettingsView
-from operations.operations import Operations
+from calculator.operations import Operations
+from calculator.settings import Settings
 from tkinter import StringVar
 
 
@@ -9,14 +10,18 @@ class UI:
     def __init__(self, root):
         self._root = root
         self._current_view = None
+
         self._expression = StringVar()
         self._fraction_decimal = StringVar()
         self._round_view = StringVar()
 
-        self._fraction_decimal.set("decimal")
+        self._fraction_decimal.set("Decimal")
         self._round_view.set("1")
 
-        self._operator = Operations(self._expression, self._fraction_decimal, self._round_view)
+        self._operator = Operations(
+            self._expression, self._fraction_decimal, self._round_view)
+        self._settings = Settings(
+            self._round_view, self._fraction_decimal, self._operator)
 
     def start(self):
         self._show_home_view()
@@ -56,6 +61,7 @@ class UI:
         self._current_view = SettingsView(
             self._root,
             self._show_home_view,
+            self._settings,
             self._operator
         )
 
