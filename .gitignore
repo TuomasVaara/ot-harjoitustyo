@@ -2,8 +2,6 @@ htmlcov
 .coverage
 .pytest_cache
 src/__pycache__
-src/Application/__pycache__
-src/Operations/__pycache__
 *.py[cod]
 *$py.class
 .DS_Store
