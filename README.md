@@ -29,3 +29,6 @@ Testit voi suorittaa komennolla: poetry run invoke test
 Testikattavuusraportin voi generoida komennolla: poetry run coverage-report
 
 Raportti generoituu _htmlcov_-hakemistoon.
+
+### Pylint
+Tiedoston .pylintrc määrittelemät tarkistukset voi suorittaa komennolla: poetry run invoke lint
