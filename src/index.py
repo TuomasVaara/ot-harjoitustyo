@@ -7,8 +7,8 @@ def main():
     window = Tk()
     window.title("Calculator")
 
-    ui = UI(window)
-    ui.start()
+    _ui = UI(window)
+    _ui.start()
 
     window.mainloop()
 

@@ -1,6 +1,6 @@
 import unittest
 from math import sin, cos, tan, pi, e, log, sqrt, factorial
-from calculator.operations import OperationsTest
+from tests.calculator.operations_test_class import OperationsTest
 
 
 class TestOperations(unittest.TestCase):
@@ -26,7 +26,7 @@ class TestOperations(unittest.TestCase):
     def test_equal_error_works(self):
         self._operations.press("5/0")
         self._operations.equal()
-        self.assertEqual(self._operations._expression, "????error????")
+        self.assertEqual(self._operations._expression, "=error")
 
     def test_equal_expression_works(self):
         self._operations.press("5+8*2-1")
@@ -77,7 +77,7 @@ class TestOperations(unittest.TestCase):
     def test_equal_error_with_false_expression(self):
         self._operations.press("2+3(8)-9*/89")
         self._operations.equal()
-        self.assertEqual(self._operations._expression, "????error????")
+        self.assertEqual(self._operations._expression, "=error")
 
     def test_equal_negative_numbers_work(self):
         self._operations.press("-6--6-6--66")

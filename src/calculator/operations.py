@@ -18,20 +18,24 @@ class Operations:
     def set_form(self, name):
         self._form = name
 
+    def set_expression(self, value):
+        self._equ.set(f"{self._expression} = {value}")
+        self._expression = ""
+
+    def error(self):
+        self._expression = "error"
+        self._equ.set(f"{self._expression}")
+        self._expression = ""
+
     def press(self, symbol):
         self._expression = self._expression + str(symbol)
         self._equ.set(self._expression)
 
     def equal(self):
         if self._form == "Decimal":
-            value = self.calculate_decimal()
+            self.calculate_decimal()
         if self._form == "Fraction":
-            value = self.calculate_fraction()
-        if value == "error":
-            self._equ.set("????error????")
-        else:
-            self._equ.set(f"{self._expression} = {value}")
-        self._expression = ""
+            self.calculate_fraction()
 
     def clear_expression(self):
         self._expression = ""
@@ -50,46 +54,14 @@ class Operations:
         global π
         try:
             value = str(round(eval(self._expression), self._round))
-            return value
-        except ValueError:
-            return "error"
+            self.set_expression(value)
+        except (SyntaxError, ZeroDivisionError):
+            self.error()
 
     def calculate_fraction(self):
         global π
         try:
             value = Fraction(eval(self._expression)).limit_denominator()
-            return value
-        except ValueError:
-            return "error"
-
-
-class OperationsTest:
-    def __init__(self):
-        self._expression = ""
-
-    def press(self, symbol):
-        if self._expression == ("????error????") or "=" in self._expression:
-            self._expression = ""
-        self._expression = self._expression + str(symbol)
-
-    def equal(self):
-        π = pi
-        try:
-            if self._expression == "":
-                self._expression = "=0"
-            else:
-                self._expression = f"={str(eval(self._expression))}"
-
-        except:
-            self._expression = "????error????"
-
-    def clear_expression(self):
-        self._expression = ""
-
-    def brackets(self):
-        left = self._expression.count("(")
-        right = self._expression.count(")")
-        if left == right:
-            self._expression = self._expression + "("
-        else:
-            self._expression = self._expression + ")"
+            self.set_expression(value)
+        except (SyntaxError, ZeroDivisionError):
+            self.error()
