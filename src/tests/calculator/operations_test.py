@@ -1,6 +1,6 @@
 import unittest
 from math import sin, cos, tan, pi, e, log, sqrt, factorial
-from tests.calculator.operations_test_class import OperationsTest
+from tests.testclass.operations_test_class import OperationsTest
 
 
 class TestOperations(unittest.TestCase):

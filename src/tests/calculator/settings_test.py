@@ -1,5 +1,5 @@
 import unittest
-from tests.calculator.settings_test_class import SettingsTest
+from tests.testclass.settings_test_class import SettingsTest
 
 class TestSettings(unittest.TestCase):
     

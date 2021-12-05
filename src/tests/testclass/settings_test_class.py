@@ -1,4 +1,4 @@
-from tests.calculator.operations_test_class import OperationsTest
+from tests.testclass.operations_test_class import OperationsTest
 
 class SettingsTest:
     def __init__(self):
