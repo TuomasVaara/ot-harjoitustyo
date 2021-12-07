@@ -19,6 +19,8 @@ class Operations:
         self._form = name
 
     def set_expression(self, value):
+        if len(value) > 6:
+            value = value[:6]
         self._equ.set(f"{self._expression} = {value}")
         self._expression = ""
 
@@ -55,7 +57,7 @@ class Operations:
         try:
             value = str(round(eval(self._expression), self._round))
             self.set_expression(value)
-        except (SyntaxError, ZeroDivisionError):
+        except (SyntaxError, ZeroDivisionError, OverflowError):
             self.error()
 
     def calculate_fraction(self):
@@ -63,5 +65,5 @@ class Operations:
         try:
             value = Fraction(eval(self._expression)).limit_denominator()
             self.set_expression(value)
-        except (SyntaxError, ZeroDivisionError):
+        except (SyntaxError, ZeroDivisionError, OverflowError):
             self.error()
