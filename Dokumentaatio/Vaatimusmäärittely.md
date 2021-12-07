@@ -16,11 +16,11 @@ Sovelluksessa on kolme mahdollista näkymää: kotisivu, laskinsivu ja asetukset
 
 ## Perusversion toiminnallisuudet
 
-- Peruslaskutoimitukset (+,-,*,/) [Tehty]
-- Erilaisten lausekkeiden laskeminen [Tehty]
-- Muut laskutoimitukset, kuten sin,cos,tan [Tehty]
-- Pyöristys tarkkuuden säätäminen [Tehty]
-- Vastauksen muodon vaihtaminen (desimaaliluku, murtoluku) [Tehty]
+- Peruslaskutoimitukset (+,-,*,/) [Tehty viikko3]
+- Erilaisten lausekkeiden laskeminen [Tehty viikko4]
+- Muut laskutoimitukset, kuten sin,cos,tan [Tehty viikko4]
+- Pyöristys tarkkuuden säätäminen [Tehty viikko5]
+- Vastauksen muodon vaihtaminen (desimaaliluku, murtoluku) [Tehty viikko5]
 - Käyttäjä voi nähdä käynnistyksen jälkeen lasketut laskutoimitukset
 
 ## Jatkokehitysideoita
