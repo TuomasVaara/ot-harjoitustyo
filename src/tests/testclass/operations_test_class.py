@@ -41,15 +41,19 @@ class OperationsTest:
     def calculate_decimal(self):
         global π
         try:
+            if self._expression == "":
+                return 0
             value = str(round(eval(self._expression), self._round))
             return value
-        except ValueError:
+        except (SyntaxError,ZeroDivisionError):
             return "error"
 
     def calculate_fraction(self):
         global π
         try:
+            if self._expression == "":
+                return 0
             value = Fraction(eval(self._expression)).limit_denominator()
             return value
-        except ValueError:
+        except (SyntaxError,ZeroDivisionError):
             return "error"

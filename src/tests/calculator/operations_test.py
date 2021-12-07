@@ -48,10 +48,10 @@ class TestOperations(unittest.TestCase):
         self._operations.equal()
         self.assertEqual(self._operations._expression, f"={tan(0)}")
 
-    def test_equal_pi_neper_log_works(self):
+    def test_equal_pi_works(self):
         self._operations.press("π")
         self._operations.equal()
-        self.assertEqual(self._operations._expression, f"={pi}")
+        self.assertEqual(self._operations._expression, f"={round(pi,1)}")
 
     def test_equal_log_works(self):
         self._operations.press("log(1)")
@@ -61,7 +61,7 @@ class TestOperations(unittest.TestCase):
     def test_equal_neper_works(self):
         self._operations.press("e")
         self._operations.equal()
-        self.assertEqual(self._operations._expression, f"={e}")
+        self.assertEqual(self._operations._expression, f"=2.7")
 
     def test_equal_power_square_factorial_works(self):
         self._operations.press("2**2+sqrt(4)+factorial(2)")
