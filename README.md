@@ -1,6 +1,6 @@
 # Laskin
 
-Laskin on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimessa (eli +,-,*,/) ja vähemmän kuin esimerkiksi peruskoulun laskimessa. 
+Sovellus on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimessa (eli +,-,*,/) ja vähemmän kuin esimerkiksi peruskoulun laskimessa. 
 
 
 ## Dokumentaatio
