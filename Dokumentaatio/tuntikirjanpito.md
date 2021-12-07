@@ -12,4 +12,5 @@
 | 30.11 | 5    | testien aloitus tkinter käyttöönoton jälkeen |
 | 1.12  | 3    | setting näkymän luonti ja nappien teko |
 | 2.12  | 3    | settings näkymän toiminnallisuuksien teko ja hakemistojen siirtelyä |
-| Yht.  | 32   |
+| 7.12  | 3    | settings testien teko |
+| Yht.  | 35   |
