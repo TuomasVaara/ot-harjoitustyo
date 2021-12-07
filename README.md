@@ -2,6 +2,8 @@
 
 Sovellus on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimessa (eli +,-,*,/) ja vähemmän kuin esimerkiksi peruskoulun laskimessa. 
 
+## Release1
+[Release1](https://github.com/TuomasVaara/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Dokumentaatio
 
