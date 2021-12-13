@@ -14,13 +14,13 @@ class SettingsBuilder:
             textvariable=self._settings._round_view,
             background="white"
         )
-        round_label.grid(row=1, column=1, sticky=constants.W)
+        round_label.grid(row=3, column=1, sticky=constants.W)
         fraction_decimal_label = ttk.Label(
             master=self._frame,
             textvariable=self._settings._fraction_decimal,
             background="white"
         )
-        fraction_decimal_label.grid(row=1, column=3, sticky=constants.W)
+        fraction_decimal_label.grid(row=1, column=2, sticky=constants.W)
 
     def _buttons(self):
         home_button = ttk.Button(
@@ -34,16 +34,22 @@ class SettingsBuilder:
             text="Increase round",
             command=lambda: self._settings.increase_round()
         )
-        round_button.grid(row=0, column=1, sticky=constants.W)
+        round_button.grid(row=2, column=1, sticky=constants.W)
+        round_button2 = ttk.Button(
+            master=self._frame,
+            text="Decrease round",
+            command=lambda: self._settings.decrease_round()
+        )
+        round_button2.grid(row=1,column=1)
         default_round_button = ttk.Button(
             master=self._frame,
             text="Default round",
             command=lambda: self._settings.default_round()
         )
-        default_round_button.grid(row=0, column=2, sticky=constants.W)
+        default_round_button.grid(row=0, column=1, sticky=constants.W)
         switch_form_button = ttk.Button(
             master=self._frame,
             text="Form",
             command=lambda: self._settings.switch_fraction_decimal()
         )
-        switch_form_button.grid(row=0, column=3, sticky=constants.W)
+        switch_form_button.grid(row=0, column=2, sticky=constants.W)

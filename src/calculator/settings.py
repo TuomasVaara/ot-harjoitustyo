@@ -4,23 +4,29 @@ class Settings:
         self._round_view = label1
         self._fraction_decimal = label2
         self._operations = operations
-        self._form = self._operations._form
-        self._round = self._operations._round
+        self.form = self._operations._form
+        self.round = self._operations._round
 
     def increase_round(self):
-        self._round += 1
-        self._round_view.set(str(self._round))
-        self._operations.set_round(self._round)
+        self.round += 1
+        self._round_view.set(str(self.round))
+        self._operations.set_round(self.round)
+
+    def decrease_round(self):
+        if self.round > 1:
+            self.round -= 1
+        self._round_view.set(str(self.round))
+        self._operations.set_round(self.round)
 
     def default_round(self):
-        self._round = 1
-        self._round_view.set(str(self._round))
-        self._operations.set_round(self._round)
+        self.round = 5
+        self._round_view.set(str(self.round))
+        self._operations.set_round(self.round)
 
     def switch_fraction_decimal(self):
-        if self._form == "Decimal":
-            self._form = "Fraction"
+        if self.form == "Decimal":
+            self.form = "Fraction"
         else:
-            self._form = "Decimal"
-        self._fraction_decimal.set(self._form)
-        self._operations.set_form(self._form)
+            self.form = "Decimal"
+        self._fraction_decimal.set(self.form)
+        self._operations.set_form(self.form)

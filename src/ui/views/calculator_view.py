@@ -29,7 +29,7 @@ class CalculatorView:
             text="Home",
             command=self._handle_home
         )
-        home_button.grid(row=0, column=2)
+        home_button.grid(row=5, column=5)
         #Build calculator
         builder._numbers()
         builder._operations()

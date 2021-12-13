@@ -16,7 +16,7 @@ class UI:
         self._round_view = StringVar()
 
         self._fraction_decimal.set("Decimal")
-        self._round_view.set("1")
+        self._round_view.set("5")
 
         self._operator = Operations(
             self._expression, self._fraction_decimal, self._round_view)

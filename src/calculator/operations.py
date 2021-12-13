@@ -1,6 +1,13 @@
-from math import pi, sqrt, sin, cos, tan, factorial, log, e
+from math import pi, log, sin, cos, tan, sqrt, e, factorial
 from fractions import Fraction
 π = pi
+ln = log
+Sin = sin
+Cos = cos
+Tan = tan
+Sqrt = sqrt
+E = e
+Factorial = factorial
 
 
 class Operations:
@@ -9,7 +16,8 @@ class Operations:
         self._fraction_decimal = fraction_decimal_view
         self._round_view = round_view
         self._expression = ""
-        self._round = 1
+        self._answer = 0
+        self._round = 5
         self._form = "Decimal"
 
     def set_round(self, num):
@@ -18,16 +26,12 @@ class Operations:
     def set_form(self, name):
         self._form = name
 
-    def set_expression(self, value):
-        if len(value) > 6:
-            value = value[:6]
-        self._equ.set(f"{self._expression} = {value}")
-        self._expression = ""
+    def set_expression(self):
+        self._equ.set(f"{self._expression} = {self._answer}")
 
     def error(self):
         self._expression = "error"
         self._equ.set(f"{self._expression}")
-        self._expression = ""
 
     def press(self, symbol):
         self._expression = self._expression + str(symbol)
@@ -38,6 +42,8 @@ class Operations:
             self.calculate_decimal()
         if self._form == "Fraction":
             self.calculate_fraction()
+        self.set_expression()
+        self._expression = ""
 
     def clear_expression(self):
         self._expression = ""
@@ -53,17 +59,16 @@ class Operations:
         self._equ.set(self._expression)
 
     def calculate_decimal(self):
-        global π
         try:
-            value = str(round(eval(self._expression), self._round))
-            self.set_expression(value)
+            self._answer = str(round(eval(self._expression), self._round))
         except (SyntaxError, ZeroDivisionError, OverflowError):
             self.error()
 
     def calculate_fraction(self):
-        global π
         try:
-            value = Fraction(eval(self._expression)).limit_denominator()
-            self.set_expression(value)
+            self._answer = Fraction(eval(self._expression)).limit_denominator()
         except (SyntaxError, ZeroDivisionError, OverflowError):
             self.error()
+
+    def ans(self):
+        self.press(self._answer)

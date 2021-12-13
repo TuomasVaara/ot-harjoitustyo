@@ -5,15 +5,15 @@ class Builder:
     def __init__(self, frame, operator):
         self._frame = frame
         self._operator = operator
-        self._equ = self._operator._equ
+        self.equ = self._operator._equ
 
     def _expression(self):
         expression = ttk.Label(
             master=self._frame,
-            textvariable=self._equ,
+            textvariable=self.equ,
             background="white"
         )
-        expression.grid(columnspan=5, ipadx=80, sticky=constants.W)
+        expression.grid(columnspan=6, ipadx=100, sticky=constants.W)
 
     def _numbers(self):
         num_1 = ttk.Button(
@@ -113,7 +113,7 @@ class Builder:
             text="=",
             command=lambda: self._operator.equal()
         )
-        equal_button.grid(row=0, column=3)
+        equal_button.grid(row=2, column=5)
         power_button = ttk.Button(
             master=self._frame,
             text=f"x**",
@@ -167,7 +167,7 @@ class Builder:
             text="AC",
             command=lambda: self._operator.clear_expression()
         )
-        AC_button.grid(row=0, column=4)
+        AC_button.grid(row=1, column=5)
         factorial_button = ttk.Button(
             master=self._frame,
             text="factorial",
@@ -180,3 +180,15 @@ class Builder:
             command=lambda: self._operator.brackets()
         )
         brackets_button.grid(row=4, column=4)
+        left_bracket_button = ttk.Button(
+            master=self._frame,
+            text="(",
+            command=lambda:self._operator.press("(")
+        )
+        left_bracket_button.grid(row=4,column=5)
+        ans_button = ttk.Button(
+            master=self._frame,
+            text="ans",
+            command=lambda:self._operator.ans()
+        )
+        ans_button.grid(row=3,column=5)
