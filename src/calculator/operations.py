@@ -12,10 +12,10 @@ Factorial = factorial
 
 
 class Operations:
-    """Toinen sovelluslogiikasta vastaava luokka"""
+    """Toinen sovelluslogiikasta vastaavavista luokista"""
 
     def __init__(self):
-        """Luokan konstruktori. Luo uuden olion, joka vastaa sovelluslogiikasta.
+        """Luokan konstruktori. Luo uuden olion, joka vastaa sovelluslogiikan laskennallisesta puolesta.
         """
         self._expression = ""
         self._answer = 0
@@ -23,7 +23,7 @@ class Operations:
         self._form = "Decimal"
 
     def change_round(self, num):
-        """Asettaa luokan pyöristyksen tarkkuuden.
+        """Asettaa luokan muutetun pyöristys tarkkuuden.
 
         Args:
             nums: Numeroarvo, joka määrittää uuden tarkkuuden pyöristämiselle.
@@ -31,7 +31,7 @@ class Operations:
         self._round = num
 
     def change_form(self, name):
-        """Asettaa luokan vastauksen muodon.
+        """Asettaa luokan muutetun vastauksen muodon.
 
         Args:
             name: Merkkijonoarvo, joka määrittää uuden muodon vastaukselle. 
@@ -39,26 +39,26 @@ class Operations:
         self._form = name
 
     def set_expression(self):
-        """Asettaa luokan lausekkeen ja vastauksen käyttöliittymän equation olioon.
+        """Lisää lausekkeeseen vastauksen.
         """
         self._expression = f"{self._expression}={self._answer}"
 
     def error(self):
-        """Virhen sattuessa asettaa käyttöliittymään arvoksi error.
+        """Virheen sattuessa asettaa lausekkeen arvoksi error.
         """
         self._answer = "error"
 
     def press(self, symbol):
-        """Asettaa käyttöliittymästä tulleen merkin näkyville käyttöliittymään.
+        """Lisää annetun symbolin lausekkeeseen ja palauttaa sitten lausekkeen käyttöliittymään kirjoitettavaksi.
 
         Args:
-            symbol: Merkkijono-, numeroarvo. Määrittää, mikä symboli lisätään käyttöliittymän equation olioon.
+            symbol: Merkkijono-, numeroarvo. Määrittää, mikä symboli lisätään lausekkeeseen self._expression.
         """
         self._expression = self._expression + str(symbol)
         return self._expression
 
     def equal(self):
-        """Määrittää kummalla tavalla self._express olion lauseke lasketaan.
+        """Määrittää missä muodossa lausekkeen arvo lasketaan ja palauttaa lausekkeen käyttöliittymään kirjoitettavaksi.
         """
         if self._expression == "":
             self._expression = "0"
@@ -76,7 +76,7 @@ class Operations:
         return self._expression
 
     def brackets(self):
-        """Laskee, kuinka monta suljetta self._express oliossa on ja sen perusteella lisää sulku merkin lausekkeeseen.
+        """Laskee, kuinka monta sulkumerkkiä lausekkeessa on ja sen perusteella lisää sulku merkin lausekkeeseen.
         """
         left = self._expression.count("(")
         right = self._expression.count(")")
