@@ -1,12 +1,12 @@
 import unittest
 from math import sin, cos, tan, pi, e, log, sqrt, factorial
-from tests.testclass.operations_test_class import OperationsTest
+from calculator.operations import Operations
 
 
 class TestOperations(unittest.TestCase):
 
     def setUp(self):
-        self._operations = OperationsTest()
+        self._operations = Operations()
 
     def test_operations_exist(self):
         self.assertEqual(self._operations._expression, "")
@@ -109,6 +109,7 @@ class TestOperations(unittest.TestCase):
     def test_ans_works(self):
         self._operations.press("666")
         self._operations.equal()
+        self._operations.clear_expression()
         self._operations.ans()
         self.assertEqual(self._operations._expression, "666")
     
