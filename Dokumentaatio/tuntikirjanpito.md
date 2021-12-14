@@ -13,4 +13,5 @@
 | 1.12  | 3    | setting näkymän luonti ja nappien teko |
 | 2.12  | 3    | settings näkymän toiminnallisuuksien teko ja hakemistojen siirtelyä |
 | 7.12  | 3    | settings testien teko |
-| Yht.  | 35   |
+| 8.12  | 6    | Sovelluslogiikan muokkaamista ja docstringin tekoa |
+| Yht.  | 41   |
