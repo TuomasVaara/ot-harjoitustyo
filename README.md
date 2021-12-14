@@ -2,8 +2,8 @@
 
 Sovellus on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimessa (eli +,-,*,/) ja vähemmän kuin esimerkiksi peruskoulun laskimessa. 
 
-## Release1
-[Release1](https://github.com/TuomasVaara/ot-harjoitustyo/releases/tag/viikko5)
+## Releases
+[Releases](https://github.com/TuomasVaara/ot-harjoitustyo/releases)
 
 ## Dokumentaatio
 
@@ -11,6 +11,7 @@ Sovellus on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimes
 - [Vaatimusmäärittely](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/Dokumentaatio/Vaatimusm%C3%A4%C3%A4rittely.md)
 - [Työaikakirjanpito](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/Dokumentaatio/tuntikirjanpito.md)
 - [Arkkitehtuurikuvaus](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/Dokumentaatio/arkkitehtuuri.md)
+- [Käyttöohje](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/Dokumentaatio/K%C3%A4ytt%C3%B6ohje.md)
 
 ## Asennus
 
