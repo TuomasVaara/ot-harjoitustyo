@@ -1,6 +1,7 @@
 class Setter:
     """Huolehtii käyttöliittymän muuttuvista elementeistä.
     """
+
     def __init__(self, equation, form_view, round_view, operations, settings):
         """Luokan konstruktori. Luo olion, joka vastaa, että sovelluslogiikka ja käyttöliittymä toimivat yhdessä.
 

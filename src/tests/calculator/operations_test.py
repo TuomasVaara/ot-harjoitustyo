@@ -112,7 +112,7 @@ class TestOperations(unittest.TestCase):
         self._operations.clear_expression()
         self._operations.ans()
         self.assertEqual(self._operations._expression, "666")
-    
+
     def test_fraction_works(self):
         self._operations._form = "Fraction"
         self._operations.press("2/3")

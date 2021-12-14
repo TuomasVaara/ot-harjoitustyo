@@ -34,7 +34,7 @@ class Operations:
         """Asettaa luokan muutetun vastauksen muodon.
 
         Args:
-            name: Merkkijonoarvo, joka määrittää uuden muodon vastaukselle. 
+            name: Merkkijonoarvo, joka määrittää uuden muodon vastaukselle.
         """
         self._form = name
 
