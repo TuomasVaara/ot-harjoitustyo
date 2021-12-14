@@ -10,6 +10,9 @@ Käyttöliittymässä on kolme mahdollista näkymää:
 - Laskinnäkymä
 - Asetuksetnäkymä
 Jokainen näkymä on totetuettu omassa luokassaan, joista kerrallaan on yksi näkyvillä. [Ui](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/ui/ui.py) luokka vastaa näkymien näyttämisesta. Käyttöliittymän näkymät on eristetty itse sovelluslogiikasta. Sovelluslogiikan ja käyttöliittymän kommunikoinnin hoitaa [Setter](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/ui/setter.py) luokka.
+Luokkakaavio ohjelmasta
+
+![Luokkakaavio](./kuvat/Luokkakaavio.jpg)
 
 ## Sovelluslogiikka
 
