@@ -27,6 +27,8 @@ Painamlla numero näppäimiä ohjelma kirjoittaa laskettavaa lauseketta. Lopuksi
 ![Lauseke](./kuvat/lauseke.jpg)
 
 ![Laskettu](./kuvat/laskettu.jpg)
+
+Laskinnäkymässä on monia näppäimiä. Suurin osa näyttää tutuilta muistakin laskimista. AC-näppäin tyhjentää lausekkeen, x** on potenssimerkki, sqrt() on neliöjuuri jne...
 ## Asetuksetnäkymä
 Jos alkunäkymässä painaa Setting-näppäintä niin pääsee ohjelman asetuksiin.
 
