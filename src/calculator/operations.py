@@ -1,5 +1,6 @@
 from math import pi, log, sin, cos, tan, sqrt, e, factorial
 from fractions import Fraction
+
 π = pi
 ln = log
 Sin = sin
@@ -11,33 +12,54 @@ Factorial = factorial
 
 
 class Operations:
-    def __init__(self, equation, fraction_decimal_view, round_view):
-        self._equ = equation
-        self._fraction_decimal = fraction_decimal_view
-        self._round_view = round_view
+    """Toinen sovelluslogiikasta vastaava luokka"""
+
+    def __init__(self):
+        """Luokan konstruktori. Luo uuden olion, joka vastaa sovelluslogiikasta.
+        """
         self._expression = ""
         self._answer = 0
         self._round = 5
         self._form = "Decimal"
 
-    def set_round(self, num):
+    def change_round(self, num):
+        """Asettaa luokan pyöristyksen tarkkuuden.
+
+        Args:
+            nums: Numeroarvo, joka määrittää uuden tarkkuuden pyöristämiselle.
+        """
         self._round = num
 
-    def set_form(self, name):
+    def change_form(self, name):
+        """Asettaa luokan vastauksen muodon.
+
+        Args:
+            name: Merkkijonoarvo, joka määrittää uuden muodon vastaukselle. 
+        """
         self._form = name
 
     def set_expression(self):
-        self._equ.set(f"{self._expression} ={self._answer}")
+        """Asettaa luokan lausekkeen ja vastauksen käyttöliittymän equation olioon.
+        """
+        self._expression = f"{self._expression}={self._answer}"
 
     def error(self):
-        self._expression = "error"
-        self._equ.set(f"{self._expression}")
+        """Virhen sattuessa asettaa käyttöliittymään arvoksi error.
+        """
+        self._answer = "error"
 
     def press(self, symbol):
+        """Asettaa käyttöliittymästä tulleen merkin näkyville käyttöliittymään.
+
+        Args:
+            symbol: Merkkijono-, numeroarvo. Määrittää, mikä symboli lisätään käyttöliittymän equation olioon.
+        """
         self._expression = self._expression + str(symbol)
-        self._equ.set(self._expression)
+        return self._expression
 
     def equal(self):
+        """Määrittää kummalla tavalla self._express olion lauseke lasketaan.
+        """
         if self._expression == "":
             self._expression = "0"
         if self._form == "Decimal":
@@ -45,32 +67,42 @@ class Operations:
         if self._form == "Fraction":
             self.calculate_fraction()
         self.set_expression()
-        self._expression = ""
+        return self._expression
 
     def clear_expression(self):
+        """Tyhjentää lausekkeen.
+        """
         self._expression = ""
-        self._equ.set(str(self._expression))
+        return self._expression
 
     def brackets(self):
+        """Laskee, kuinka monta suljetta self._express oliossa on ja sen perusteella lisää sulku merkin lausekkeeseen.
+        """
         left = self._expression.count("(")
         right = self._expression.count(")")
         if left == right:
             self._expression = self._expression + "("
         if left > right:
             self._expression = self._expression + ")"
-        self._equ.set(self._expression)
+        return self._expression
 
     def calculate_decimal(self):
+        """Laskee lausekkeen ja antaa vastauksen desimaalina.
+        """
         try:
             self._answer = str(round(eval(self._expression), self._round))
-        except (SyntaxError, ZeroDivisionError, OverflowError):
+        except (SyntaxError, ZeroDivisionError, OverflowError, TypeError, NameError):
             self.error()
 
     def calculate_fraction(self):
+        """Laskee lausekkeen ja antaa vastauksen murtolukuna.
+        """
         try:
             self._answer = Fraction(eval(self._expression)).limit_denominator()
-        except (SyntaxError, ZeroDivisionError, OverflowError):
+        except (SyntaxError, ZeroDivisionError, OverflowError, TypeError, NameError):
             self.error()
 
     def ans(self):
-        self.press(self._answer)
+        """Asettaa edellisen laskun vastauksen lausekkeseen.
+        """
+        return self.press(self._answer)

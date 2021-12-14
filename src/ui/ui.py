@@ -3,6 +3,7 @@ from ui.views.home_view import HomeView
 from ui.views.settings_view import SettingsView
 from calculator.operations import Operations
 from calculator.settings import Settings
+from ui.setter import Setter
 from tkinter import StringVar
 
 
@@ -18,10 +19,10 @@ class UI:
         self._fraction_decimal.set("Decimal")
         self._round_view.set("5")
 
-        self._operator = Operations(
-            self._expression, self._fraction_decimal, self._round_view)
-        self._settings = Settings(
-            self._round_view, self._fraction_decimal, self._operator)
+        self._operator = Operations()
+        self._settings = Settings()
+        self._setter = Setter(
+            self._expression, self._fraction_decimal, self._round_view, self._operator, self._settings)
 
     def start(self):
         self._show_home_view()
@@ -50,7 +51,8 @@ class UI:
         self._current_view = CalculatorView(
             self._root,
             self._show_home_view,
-            self._operator
+            self._expression,
+            self._setter
         )
 
         self._current_view.pack()
@@ -61,8 +63,9 @@ class UI:
         self._current_view = SettingsView(
             self._root,
             self._show_home_view,
-            self._settings,
-            self._operator
+            self._setter,
+            self._fraction_decimal,
+            self._round_view
         )
 
         self._current_view.pack()

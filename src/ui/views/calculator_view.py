@@ -4,12 +4,13 @@ from ui.builders.build_calculator_view import Builder
 
 class CalculatorView:
 
-    def __init__(self, root, handle_home, operator):
+    def __init__(self, root, handle_home, expression, setter):
         self._root = root
         self._handle_home = handle_home
         self._frame = None
-        self._operator = operator
-        
+        self._expression = expression
+        self._setter = setter
+
         self._initialize()
 
     def pack(self):
@@ -20,16 +21,8 @@ class CalculatorView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        builder = Builder(self._frame, self._operator)
-        #Build expression 
+        builder = Builder(self._frame, self._handle_home,
+                          self._setter, self._expression)
         builder._expression()
-        #Button to Home screen
-        home_button = ttk.Button(
-            master=self._frame,
-            text="Home",
-            command=self._handle_home
-        )
-        home_button.grid(row=5, column=5)
-        #Build calculator
         builder._numbers()
         builder._operations()

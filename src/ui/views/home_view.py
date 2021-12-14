@@ -2,6 +2,7 @@ from tkinter import ttk, constants
 
 from ui.builders.build_home_view import HomeBuilder
 
+
 class HomeView:
 
     def __init__(self, root, handle_calculator, handle_exit, handle_settings):
@@ -20,9 +21,8 @@ class HomeView:
         self._frame.destroy()
 
     def _initialize(self):
-        
+
         self._frame = ttk.Frame(master=self._root)
-        builder = HomeBuilder(self._frame, self._handle_exit, self._handle_calculator, self._handle_settings)
+        builder = HomeBuilder(self._frame, self._handle_exit,
+                              self._handle_calculator, self._handle_settings)
         builder._buttons()
-        
-        
