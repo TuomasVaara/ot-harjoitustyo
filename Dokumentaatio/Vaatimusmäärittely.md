@@ -21,6 +21,7 @@ Sovelluksessa on kolme mahdollista näkymää: kotisivu, laskinsivu ja asetukset
 - Muut laskutoimitukset, kuten sin,cos,tan [Tehty viikko4]
 - Pyöristys tarkkuuden säätäminen [Tehty viikko5]
 - Vastauksen muodon vaihtaminen (desimaaliluku, murtoluku) [Tehty viikko5]
+- Edellisen laskun vastausta pystyy käyttämään seuraavassa laskussa [Tehty viikko6]
 - Käyttäjä voi nähdä käynnistyksen jälkeen lasketut laskutoimitukset
 
 ## Jatkokehitysideoita
