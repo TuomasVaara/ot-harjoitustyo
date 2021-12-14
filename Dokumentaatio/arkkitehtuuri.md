@@ -9,11 +9,11 @@ Käyttöliittymässä on kolme mahdollista näkymää:
 - Alkunäkymä
 - Laskinnäkymä
 - Asetuksetnäkymä
-Jokainen näkymä on totetuettu omassa luokassaan, joista kerrallaan on yksi näkyvillä. [Ui]() luokka vastaa näkymien näyttämisesta. Käyttöliittymän näkymät on eristetty itse sovelluslogiikasta. Sovelluslogiikan ja käyttöliittymän kommunikoinnin hoitaa [Setter]() luokka.
+Jokainen näkymä on totetuettu omassa luokassaan, joista kerrallaan on yksi näkyvillä. [Ui](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/ui/ui.py) luokka vastaa näkymien näyttämisesta. Käyttöliittymän näkymät on eristetty itse sovelluslogiikasta. Sovelluslogiikan ja käyttöliittymän kommunikoinnin hoitaa [Setter](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/ui/setter.py) luokka.
 
 ## Sovelluslogiikka
 
-Sovelluslogiikan toteuttavat luokat [Operations]() ja [Settings](). [Setter]() luokasta kutsutaan sovelluslogiikan luokkia. 
+Sovelluslogiikan toteuttavat luokat [Operations](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/calculator/operations.py) ja [Settings](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/calculator/settings.py). [Setter](https://github.com/TuomasVaara/ot-harjoitustyo/blob/master/src/ui/setter.py) luokasta kutsutaan sovelluslogiikan luokkia. 
 
 ![Sovelluslogiikka](./kuvat/Sovelluslogiikka.jpg)
 
