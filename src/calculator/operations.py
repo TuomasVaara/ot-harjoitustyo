@@ -27,7 +27,7 @@ class Operations:
         self._form = name
 
     def set_expression(self):
-        self._equ.set(f"{self._expression} = {self._answer}")
+        self._equ.set(f"{self._expression} ={self._answer}")
 
     def error(self):
         self._expression = "error"
@@ -38,6 +38,8 @@ class Operations:
         self._equ.set(self._expression)
 
     def equal(self):
+        if self._expression == "":
+            self._expression = "0"
         if self._form == "Decimal":
             self.calculate_decimal()
         if self._form == "Fraction":

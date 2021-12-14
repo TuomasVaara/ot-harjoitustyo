@@ -10,8 +10,13 @@ class SettingsTest:
         self._round += 1
         self._operations.set_round(self._round)
 
+    def decrease_round(self):
+        if self._round > 1:
+            self._round -=1
+        self._operations.set_round(self._round)
+
     def default_round(self):
-        self._round = 1
+        self._round = 5
         self._operations.set_round(self._round)
 
     def switch_fraction_decimal(self):
