@@ -15,7 +15,7 @@ Jokainen näkymä on totetuettu omassa luokassaan, joista kerrallaan on yksi nä
 
 Sovelluslogiikan toteuttavat luokat [Operations]() ja [Settings](). [Setter]() luokasta kutsutaan sovelluslogiikan luokkia. 
 
-![Sovelluslogiikka](./kuvat/Sovelluslogiika.jpg)
+![Sovelluslogiikka](./kuvat/Sovelluslogiikka.jpg)
 
 ## Päätoiminnallisuudet
 Kuvataan vielä pari ohjelman päätoiminnallisuutta sekvenssikaaviona.
