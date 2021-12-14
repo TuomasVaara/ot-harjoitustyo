@@ -2,7 +2,7 @@
 
 ## Rakenne
 Ohjelman rakenne noudattaa kaksitasoista kerrosarkkitehtuuria ja koodin pakkausrakenne on seuraava:
-![Pakkauskaavio](./kuvat/Pakkauskkavio.jpg)
+![Pakkauskaavio](./kuvat/Pakkauskaavio.jpg)
 Pakkaus Ui sisältää kaiken käyttöliittymään sisältyvän koodin sekä käyttöliittymän ja sovelluslogikan yhdistävän luokan Setter. Pakkaus Calculator sisältää sovelluslogiikan koodin.
 ## Käyttöliittymä
 Käyttöliittymässä on kolme mahdollista näkymää:
