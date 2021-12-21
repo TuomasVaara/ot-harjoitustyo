@@ -5,11 +5,12 @@ from ui.builders.build_home_view import HomeBuilder
 
 class HomeView:
 
-    def __init__(self, root, handle_calculator, handle_exit, handle_settings):
+    def __init__(self, root, handle_calculator, handle_exit, handle_settings, handle_history):
         self._root = root
         self._handle_exit = handle_exit
         self._handle_calculator = handle_calculator
         self._handle_settings = handle_settings
+        self._handle_history = handle_history
         self._frame = None
 
         self._initialize()
@@ -24,5 +25,5 @@ class HomeView:
 
         self._frame = ttk.Frame(master=self._root)
         builder = HomeBuilder(self._frame, self._handle_exit,
-                              self._handle_calculator, self._handle_settings)
+                              self._handle_calculator, self._handle_settings, self._handle_history)
         builder._buttons()

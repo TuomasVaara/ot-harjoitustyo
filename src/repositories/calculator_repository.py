@@ -1,5 +1,4 @@
 from pathlib import Path
-from entities.calculation import Calculation
 from config import CALCULATOR_FILE_PATH
 
 
@@ -30,6 +29,10 @@ class CalculatorRepository:
         self._write(calculations)
 
         return calculation
+    def find_all(self):
+        """[summary]
+        """
+        return self._read()
 
     def clear_file(self):
         """[summary]
@@ -48,12 +51,8 @@ class CalculatorRepository:
         with open(self._file_path) as file:
             for row in file:
                 row = row.replace("\n", "")
-                parts = row.split(";")
-
-                expression = parts[0]
-                solution = parts[1]
-
-                calculations.append(Calculation(expression, solution))
+                
+                calculations.append(row)
 
         return calculations
 
@@ -63,8 +62,6 @@ class CalculatorRepository:
         with open(self._file_path, "w") as file:
             for calculation in calculations:
                 
-                row = f"{calculation.expression};{calculation.solution}"
-
-                file.write(row+"\n")
+                file.write(calculation+"\n")
 
 calculator_repository = CalculatorRepository(CALCULATOR_FILE_PATH)

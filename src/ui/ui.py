@@ -1,6 +1,7 @@
 from ui.views.calculator_view import CalculatorView
 from ui.views.home_view import HomeView
 from ui.views.settings_view import SettingsView
+from ui.views.history_view import HistoryView
 from ui.setter import Setter
 from tkinter import StringVar
 
@@ -36,7 +37,8 @@ class UI:
             self._root,
             self._show_calculator_view,
             self._root.destroy,
-            self._show_settings_view
+            self._show_settings_view,
+            self._show_history_view
         )
 
         self._current_view.pack()
@@ -65,3 +67,11 @@ class UI:
         )
 
         self._current_view.pack()
+
+    def _show_history_view(self):
+        self._hide_current_view()
+
+        self._current_view = HistoryView(
+            self._root, 
+            self._show_home_view
+        )

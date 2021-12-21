@@ -42,6 +42,7 @@ class Operations:
     def set_expression(self):
         """Lisää lausekkeeseen vastauksen.
         """
+       
         self._expression = f"{self._expression}={self._answer}"
         REPOSITORY.add(self._expression)
 
