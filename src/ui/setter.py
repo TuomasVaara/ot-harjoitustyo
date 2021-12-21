@@ -1,23 +1,25 @@
+from calculator.operations import Operations
+from calculator.settings import Settings
+
+
 class Setter:
     """Huolehtii käyttöliittymän muuttuvista elementeistä.
     """
 
-    def __init__(self, equation, form_view, round_view, operations, settings):
+    def __init__(self, equation, form_view, round_view):
         """Luokan konstruktori. Luo olion, joka vastaa, että sovelluslogiikka ja käyttöliittymä toimivat yhdessä.
 
         Args:
             equation: Tkinter StringVar olio. Määrittää calculator näkymässä, lausekkeen.
             form_view: Tkinter StringVar olio. Määrittää settings näkymässä, laskujen vastausten muodon.
             round_view: Tkinter StringVar olio. Määrittää settings näkymässä, laskujen pyöristys tarkkuuden.
-            operations: Operations olio. Määrittää ohjelman laskutoimitukset ja palauttaa arvot, joilla muokataan equation oliota.
-            settings: Settings olio. Määrittää ohjelman asetuksia, kuten pyöristyksen ja vastauksen muodon. Palauttaa arvot, joilla muokataa form_view ja round_view olioita
         """
         self._equation = equation
         self._round = round_view
         self._form = form_view
 
-        self._operations = operations
-        self._settings = settings
+        self._operations = Operations()
+        self._settings = Settings()
 # Calculator
 
     def set_press(self, symbol):

@@ -6,3 +6,9 @@ src/__pycache__
 *$py.class
 .DS_Store
 .vscode
+
+# data files
+data/database.sqlite
+data/calculations.csv
+data/test-database.sqlite
+data/test-calculations.csv
