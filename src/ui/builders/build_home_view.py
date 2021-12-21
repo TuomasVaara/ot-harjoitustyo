@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-
+from calculator.operations import REPOSITORY
 
 class HomeBuilder:
     def __init__(self, frame, handle_calculator, handle_exit, handle_settings, handle_history):
@@ -37,6 +37,6 @@ class HomeBuilder:
         clear_history_button = ttk.Button(
             master=self._frame,
             text="Clear history",
-            command=None
+            command=lambda:REPOSITORY._clear_file()
         )
         clear_history_button.grid(row=1, column=1, sticky=constants.W)

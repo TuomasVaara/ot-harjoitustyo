@@ -29,12 +29,13 @@ class CalculatorRepository:
         self._write(calculations)
 
         return calculation
+
     def find_all(self):
         """[summary]
         """
         return self._read()
 
-    def clear_file(self):
+    def _clear_file(self):
         """[summary]
         """
 
@@ -51,7 +52,7 @@ class CalculatorRepository:
         with open(self._file_path) as file:
             for row in file:
                 row = row.replace("\n", "")
-                
+
                 calculations.append(row)
 
         return calculations
@@ -61,7 +62,8 @@ class CalculatorRepository:
 
         with open(self._file_path, "w") as file:
             for calculation in calculations:
-                
+
                 file.write(calculation+"\n")
+
 
 calculator_repository = CalculatorRepository(CALCULATOR_FILE_PATH)
