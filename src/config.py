@@ -10,6 +10,3 @@ except FileNotFoundError:
 
 CALCULATOR_FILENAME = os.getenv("CALCULATOR_FILENAME") or "calculations.csv"
 CALCULATOR_FILE_PATH = os.path.join(dirname, '..', 'data', CALCULATOR_FILENAME)
-
-DATABASE_FILENAME = os.getenv("DATABASE_FILENAME") or "database.sqlite"
-DATABASE_FILE_PATH = os.path.join(dirname, '..', 'data', DATABASE_FILENAME)
