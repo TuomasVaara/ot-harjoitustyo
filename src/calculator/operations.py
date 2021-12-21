@@ -1,3 +1,4 @@
+from repositories.calculator_repository import (calculator_repository as default_repository)
 from math import pi, log, sin, cos, tan, sqrt, e, factorial
 from fractions import Fraction
 
@@ -9,7 +10,7 @@ Tan = tan
 Sqrt = sqrt
 E = e
 Factorial = factorial
-
+REPOSITORY = default_repository
 
 class Operations:
     """Toinen sovelluslogiikasta vastaavavista luokista"""
@@ -42,6 +43,7 @@ class Operations:
         """Lisää lausekkeeseen vastauksen.
         """
         self._expression = f"{self._expression}={self._answer}"
+        REPOSITORY.add(self._expression)
 
     def error(self):
         """Virheen sattuessa asettaa lausekkeen arvoksi error.
