@@ -14,4 +14,5 @@
 | 2.12  | 3    | settings näkymän toiminnallisuuksien teko ja hakemistojen siirtelyä |
 | 7.12  | 3    | settings testien teko |
 | 8.12  | 6    | Sovelluslogiikan muokkaamista ja docstringin tekoa |
-| Yht.  | 41   |
+| 21.12 | 5    | Tietojen tallennuksen tekoa ja viimeinen toiminnallisuus |
+| Yht.  | 46   |
