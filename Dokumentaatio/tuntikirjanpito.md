@@ -15,4 +15,5 @@
 | 7.12  | 3    | settings testien teko |
 | 8.12  | 6    | Sovelluslogiikan muokkaamista ja docstringin tekoa |
 | 21.12 | 5    | Tietojen tallennuksen tekoa ja viimeinen toiminnallisuus |
-| Yht.  | 46   |
+| 22.12 | 4    | Docstring, tietokanta testit ja dokumentaatiota |
+| Yht.  | 50   |
