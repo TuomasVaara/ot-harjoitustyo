@@ -3,23 +3,23 @@ from config import CALCULATOR_FILE_PATH
 
 
 class CalculatorRepository:
-    """[summary]
+    """Laskujen lukemista ja lisäämistä hoitava luokka.
     """
 
     def __init__(self, file_path):
-        """[summary]
+        """Luokan konstruktori. Luo uuden tiedon hoitamisesta vastaavan palvelun.
 
         Args:
-            file_path ([type]): [description]
+            file_path : polku tiedostoon.
         """
 
         self._file_path = file_path
 
     def add(self, calculation):
-        """
+        """ Lisää tietokantaan laskun 
 
         Args:
-            calculations ([type]): [description]
+            calculations : Merkkijono olio, joka lisätään tiedostoon.
         """
 
         calculations = self.find_all()
@@ -31,12 +31,15 @@ class CalculatorRepository:
         return calculation
 
     def find_all(self):
-        """[summary]
+        """Palauttaa kaikki lasketut laskut.
+
+        Returns:
+            Palauttaa listan kaikista laskuista.
         """
         return self._read()
 
     def _clear_file(self):
-        """[summary]
+        """Tyhjentää tiedoston.
         """
 
         self._write([])

@@ -42,7 +42,7 @@ class Operations:
         self._form = name
 
     def set_expression(self):
-        """Lisää lausekkeeseen vastauksen.
+        """Lisää lausekkeeseen vastauksen ja tallentaa laskun csv. tiedostoon.
         """
 
         self._expression = f"{self._expression}={self._answer}"

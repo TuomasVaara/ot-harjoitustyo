@@ -20,7 +20,6 @@ class Setter:
 
         self._operations = Operations()
         self._settings = Settings()
-# Calculator
 
     def set_press(self, symbol):
         """Kirjoittaa annetun symbolin/symbolit equation olioon.
@@ -51,7 +50,6 @@ class Setter:
         """Kirjoittaa edellisen laskun vastauksen equation olioon.
         """
         self._equation.set(self._operations.ans())
-# Settings
 
     def set_increase_round(self):
         """Kasvattaa Settings olion avulla ohjelman pyöristys tarkkuutta. Kirjoittaa nykyisen tarkkuuden round_view olioon.
