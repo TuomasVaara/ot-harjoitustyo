@@ -20,8 +20,10 @@ Sovellus on peruslaskin, jossa on enemmän toiminnallisuuksia kuin taskulaskimes
 ```bash
 poetry install
 ```
-2. Käynnistä sovellus komennolla: poetry run invoke start
-
+2. Käynnistä sovellus komennolla: 
+```bash
+poetry run invoke start
+```
 
 ## Komentorivitoiminnot
 
