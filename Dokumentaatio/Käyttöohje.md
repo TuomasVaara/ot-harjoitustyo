@@ -1,5 +1,5 @@
 # Käyttöohje
-Hae ja lataa projektin viimeisin versio [Release]() Assets osion Source code kohdasta.
+Hae ja lataa projektin viimeisin versio [Release](https://github.com/TuomasVaara/ot-harjoitustyo/releases/tag/loppupalautus) Assets osion Source code kohdasta.
 
 ## Konfigurointi
 Tallennusta varten käytettävä tiedosto on .env tiedostossa juurihakemistossa. Jos tiedostoja ei ole valmiiksi ole, niin ohjelma luo ne automaattisesti data-hakemistoon. Tiedosto on muotoa:
