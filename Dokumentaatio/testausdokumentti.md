@@ -1,5 +1,5 @@
 # Testausdokumentti
-Ohjelmaa on testattu automatisoiduilla unittesteilla ja järjestelmätason testejä käsin manuaalisesti.
+Ohjelmaa on testattu automatisoiduilla unittesteilla ja järjestelmää manuaalisesti.
 
 ## Automatisoidut testit
 
