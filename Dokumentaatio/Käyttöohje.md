@@ -4,7 +4,7 @@ Hae ja lataa projektin viimeisin versio [Release]() Assets osion Source code koh
 ## Konfigurointi
 Tallennusta varten käytettävä tiedosto on .env tiedostossa juurihakemistossa. Jos tiedostoja ei ole valmiiksi ole, niin ohjelma luo ne automaattisesti data-hakemistoon. Tiedosto on muotoa:
 
-![tiedosto_muoto]()
+![tiedosto_muoto](./kuvat/tiedosto_muoto.jpg)
 
 ## Ohjelman käynnistäminen
 Aluksi lataa ohjelman riippuudet syöttämällä komentoriville käsky
@@ -46,7 +46,7 @@ Painamalla Increase- tai Decrease round nappeja ohjelman pyöristys tarkkuus las
 
 Laskuhistoria on tyhjä jos katsot sinne heti ensimmäisen käynnistyksen jälkeen, koska et ole vielä ehtinyt laskea mitään. Laskettuasi laskuja niin laskuhistoriaan alkaa ilmestymään lausekkeita.
 
-![Laskuhistoria_tyhjä]()
+![Laskuhistoria_tyhjä](./kuvat/Laskuhistoria_tyhjä.jpg)
 
 
-![Laskuhistoria]()
+![Laskuhistoria](./kuvat/Laskuhistoria.jpg)
